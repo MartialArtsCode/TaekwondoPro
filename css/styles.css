@@ -85,7 +85,7 @@ h3 {
    ========================================================================== */
 .hero {
     background: linear-gradient(rgba(10,10,10,0.75), rgba(10,10,10,0.85)),
-                url('../images/hero-bg.jpg') center/cover no-repeat; /* ← add your own bg image */
+                url('assets/hero-bg.jpg') center/cover no-repeat; /* ← add your own bg image */
     color: white;
     text-align: center;
     padding: 140px 24px 100px;
