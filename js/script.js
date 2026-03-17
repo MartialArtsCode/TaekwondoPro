@@ -13,7 +13,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const trialForm = document.querySelector('.trial-form');
 if (trialForm) {
     trialForm.addEventListener('submit', function(e) {
-        // You can keep formsubmit.co backend — this is just visual feedback
+        //keep formsubmit.co backend — this is just visual feedback
         setTimeout(() => {
             alert("Thank you! We'll contact you shortly to schedule your free trial.");
         }, 800);
