@@ -43,6 +43,16 @@ body {
 }
 
 .section {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+}
+
+.section.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+
+.section {
     padding: 80px 0;
 }
 
