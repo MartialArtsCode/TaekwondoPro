@@ -12,26 +12,11 @@ html {
 }
 
 body {
-  perspective: 2px;
-  transform-style: preserve-3d;
-  overflow-x: hidden;
-}
-
-.glow-bg {
-  position: fixed;
-  inset: 0;
-  background: 
-    radial-gradient(ellipse at center, rgba(200,16,46,0.38) 0%, rgba(13,17,23,0.92) 100%),
-    #0d1117;
-  transform: translateZ(-1px) scale(2);
-  z-index: -2;
-  pointer-events: none;
-}
-
-main {
-  position: relative;
-  z-index: 1;
-  transform: translateZ(0);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #d4d4d4;
+    background: #0d1117;
+    min-height: 100vh;
 }
 
 /* ==========================================================================
