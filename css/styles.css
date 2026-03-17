@@ -14,46 +14,45 @@ html {
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
-    color: #222;
-    background: #0f0f0f;
+    color: #d4d4d4;
+    background: #0d1117;
     min-height: 100vh;
 }
 
 /* ==========================================================================
-   COLORS & VARIABLES
+   VARIABLES
    ========================================================================== */
 :root {
-    --color-primary:   #c8102e;     /* taekwondo red */
-    --color-accent:    #ffcc00;     /* belt yellow/gold */
-    --color-dark:      #0a0a0a;
-    --color-gray:      #1e1e1e;
-    --color-light:     #f5f5f5;
-    --color-text:      #e0e0e0;
+    --color-primary:   #c8102e;
+    --color-accent:    #ffcc00;
+    --color-dark:      #0d1117;
+    --color-gray:      #161b22;
+    --color-light:     #e6e6e6;
+    --color-text:      #d4d4d4;
+    --color-muted:     #8b949e;
     --radius:          12px;
-    --shadow:          0 8px 32px rgba(0,0,0,0.55);
+    --shadow:          0 10px 38px rgba(0,0,0,0.6);
 }
 
 /* ==========================================================================
-   CONTAINER & LAYOUT
+   LAYOUT
    ========================================================================== */
 .container {
-    max-width: flex;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
 .section {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s ease-out;
+    padding: 80px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
 }
 
 .section.fade-in {
-        opacity: 1;
-        transform: translateY(0);
-
-.section {
-    padding: 80px 0;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ==========================================================================
@@ -84,17 +83,18 @@ h3 {
    HERO
    ========================================================================== */
 .hero {
-    background: linear-gradient(rgba(10,10,10,0.75), rgba(10,10,10,0.85)),
-                url('assets/hero-bg.jpg') center/cover no-repeat; /*← add bg image */
+    background: linear-gradient(rgba(13,17,23,0.82), rgba(13,17,23,0.92)),
+                url('assets/hero-professional.jpg') center/cover no-repeat fixed;
     color: white;
     text-align: center;
-    padding: 140px 24px 100px;
+    padding: 120px 24px 80px;
     position: relative;
 }
 
 .hero .logo {
-    max-width: 280px;
-    margin-bottom: 2rem;
+    width: 80%;
+    max-width: 320px;
+    margin-bottom: 1.8rem;
 }
 
 .tagline {
@@ -152,12 +152,12 @@ h3 {
 }
 
 /* ==========================================================================
-   QUICK NAV (sticky)
+   QUICK NAV
    ========================================================================== */
 .quick-nav {
     position: sticky;
     top: 0;
-    background: rgba(10,10,10,0.92);
+    background: rgba(13,17,23,0.95);
     backdrop-filter: blur(10px);
     padding: 14px 0;
     z-index: 1000;
@@ -178,10 +178,10 @@ h3 {
 }
 
 /* ==========================================================================
-   CARDS & PROGRAMS
+   PROGRAM CARDS
    ========================================================================== */
 .programs {
-    background: var(--color-gray);
+    background: linear-gradient(to bottom, #0d1117, #161b22);
 }
 
 .program-grid {
@@ -243,13 +243,13 @@ h3 {
 
 .stats strong {
     display: block;
-    font-size: 2.8rem;
+    font-size: 3rem;
     color: var(--color-accent);
     margin-bottom: 0.4rem;
 }
 
 /* ==========================================================================
-   SCHEDULE TABLE
+   SCHEDULE
    ========================================================================== */
 .schedule-table-wrapper {
     overflow-x: auto;
@@ -289,7 +289,7 @@ h3 {
    CONTACT & FORM
    ========================================================================== */
 .contact {
-    background: var(--color-gray);
+    background: linear-gradient(to bottom, #0d1117, #161b22);
 }
 
 .contact-options {
@@ -297,12 +297,6 @@ h3 {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     margin-top: 3rem;
-}
-
-@media (max-width: 850px) {
-    .contact-options {
-        grid-template-columns: 1fr;
-    }
 }
 
 .trial-form {
@@ -320,6 +314,11 @@ h3 {
     background: #111;
     color: white;
     font-size: 1.05rem;
+}
+
+.trial-form input::placeholder,
+.trial-form textarea::placeholder {
+    color: #888;
 }
 
 .trial-form input:focus,
@@ -354,9 +353,36 @@ footer .tagline {
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */
+@media (max-width: 850px) {
+    .contact-options {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+}
+
 @media (max-width: 768px) {
-    .hero { padding: 100px 20px 80px; }
-    .section { padding: 60px 0; }
-    h2 { font-size: 2.6rem; }
-    .quick-nav a { margin: 0 12px; font-size: 0.95rem; }
+    .hero {
+        padding: 90px 20px 60px;
+    }
+    h1 {
+        font-size: clamp(2.2rem, 7vw, 4rem);
+    }
+    h2 {
+        font-size: 2.6rem;
+    }
+    .quick-nav a {
+        margin: 0 12px;
+        font-size: 0.95rem;
+    }
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-cta .btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 }
