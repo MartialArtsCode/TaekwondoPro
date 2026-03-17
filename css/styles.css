@@ -37,7 +37,7 @@ body {
    CONTAINER & LAYOUT
    ========================================================================== */
 .container {
-    max-width: 1200px;
+    max-width: flex;
     margin: 0 auto;
     padding: 0 24px;
 }
