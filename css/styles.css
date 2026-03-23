@@ -508,4 +508,13 @@ h3 {
         right: 30px;
         font-size: 34px;
     }
+
+    .sms-float {
+        width: 55px;
+        height: 55px;
+        bottom: 30px;
+        right: 30px;
+        font-size: 34px;
+    }
+   
 }
