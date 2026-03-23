@@ -34,7 +34,7 @@ button.nav-btn {
   color: #fff;
   cursor: pointer;
   font-weight: 600;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 button.nav-btn:hover {
@@ -43,9 +43,8 @@ button.nav-btn:hover {
 }
 
 /* ---------- HERO ---------- */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
+
+
 }
 
 .hero .logo {
@@ -60,6 +59,8 @@ button.nav-btn:hover {
 
 .hero,
 .tagline {
+  text-align: center;
+  padding: 80px 20px;
   font-size: 1.3rem;
   color: #ddd;
   margin-bottom: 40px;
@@ -83,14 +84,15 @@ button.nav-btn:hover {
   background: #25D366;
 }
 
-.sms-float {
-  background: #007AFF;
-}
+
 
 .whatsapp-float:hover,
 .sms-float:hover {
   transform: scale(1.1);
   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  background: #007AFF;
+  shadow: #25D366;
+  
 }
 
 /* ---------- PROGRAM GRID ---------- */
