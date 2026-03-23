@@ -1,176 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Panamerican Taekwondo Academy – Professional Taekwondo training in Winston-Salem, NC. Classes for kids, teens, adults & neurodivergent students. Free trial available!">
-    <meta name="keywords" content="taekwondo, martial arts, Winston-Salem, kids taekwondo, self defense, WTF, discipline">
-    <title>Panamerican Taekwondo Academy | Winston-Salem, NC</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="assets/full.png" type="image/png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Panamerican Taekwondo Academy – Professional Taekwondo training in Winston‑Salem, NC. Classes for kids, teens, adults & neurodivergent students. Free trial available.">
+  <meta name="keywords" content="taekwondo, martial arts, Winston‑Salem, kids taekwondo, self defense, discipline">
+  <title>Panamerican Taekwondo Academy — Winston‑Salem, NC</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/full.png" type="image/png">
 </head>
 <body>
-    <!-- Header / Hero -->
-    <header class="container">
-        <div class="hero">
-            <img src="assets/full.png" alt="Panamerican Taekwondo Academy Logo" class="logo">
-            <h2>Master The Art</h2>
-            <p>Build Confidence.<br>Transform Your Life.</p>
-            <ul>
-                <li><h3>Discipline</h3></li>
-                <li><h3>Respect</h3></li>
-                <li><h3>Excellence</h3></li>
-            </ul>
-                <p><em>For All Ages</em></p>
-        </div>
-    </header>
+  <!-- Quick Nav (opens accessible modals) -->
+  <nav class="quick-nav" role="navigation" aria-label="Quick links">
+    <button class="nav-btn" data-modal="about-modal">About</button>
+    <button class="nav-btn" data-modal="programs-modal">Programs</button>
+    <button class="nav-btn" data-modal="schedule-modal">Schedule</button>
+    <button class="nav-btn" data-modal="contact-modal">Contact</button>
+  </nav>
+
+  <!-- Hero -->
+  <header class="container hero" role="banner">
+    <img src="assets/full.png" alt="Panamerican Taekwondo Academy logo" class="logo">
+    <h1>Master The Art</h1>
+    <p class="tagline">Build confidence. Transform your life.</p>
+
+    <ul class="values" aria-hidden="false">
+      <li><h3>Discipline</h3></li>
+      <li><h3>Respect</h3></li>
+      <li><h3>Excellence</h3></li>
+    </ul>
+
     <div class="hero-cta">
-        <a href="https://wa.me/13366248499?text=I%20want%20to%20schedule%20a%20free%20trial%20at%20Panamerican%20Taekwondo%20Academy"
-            class="whatsapp-float" target="_blank" rel="noopener" 
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="sms:+13366248499?body=I%20want%20to%20schedule%20a%20free%20trial%20at%20Panamerican%20Taekwondo%20Academy"
-            class="sms-float" target="_blank" rel="noopener">
-            <i class fas fa-sms"></i>
-        </a>
-    </div>   
-    <!-- Quick Nav -->
-    <nav class="quick-nav">
-        <a href="#about">About</a>
-        <a href="#programs">Programs</a>
-        <a href="#schedule">Schedule</a>
-        <a href="#contact">Contact</a>
-    </nav>
+      <a href="https://wa.me/13366248499?text=I%20want%20to%20schedule%20a%20free%20trial%20at%20Panamerican%20Taekwondo%20Academy" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Message on WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      </a>
 
-    <main class="container"><!-- About -->
-        <section id="about" class="section">
-            <h2>About Our Academy</h2>
-            <p>With over 20 years of experience</p>
-            <p>We teach aligned with "World Taekwondo (WT)" and "Global Traditional Taekwondo Federation (GTTF)" curriculums</p>
-            <p><strong>We dedicate to individuaql growth</strong></p>
-            <p>confidence, discipline, fitness and real self-defense skills</p>
-            <p><em>All Ages - All Levels</em></p>
-            
-            <div class="stats">
-                <div><strong>300+</strong> Students Trained</div>
-                <div><strong>50+</strong> Competition Medals</div>
-                <div><strong>20+</strong> Years of Excellence</div>
-            </div>
-        </section><!-- Programs -->
-        
-        <section id="programs" class="section programs">
-            <h2>Our Programs</h2>
-            <div class="program-grid">
-                
-                <div class="program-card featured">
-                    <i class="fas fa-bolt"></i>
-                    
-                    <h3>Power Up</h3>
-                    <span>All Ages • Focus</span>
-                    <p>Build focus, coordination, emotional regulation & confidence through adapted Taekwondo.</p>
-                </div>
+      <a href="sms:+13366248499?body=I%20want%20to%20schedule%20a%20free%20trial%20at%20Panamerican%20Taekwondo%20Academy" class="sms-float" target="_blank" rel="noopener noreferrer" aria-label="Send SMS">
+        <i class="fas fa-comment-dots" aria-hidden="true"></i>
+      </a>
+    </div>
+  </header>
 
-                <div class="program-card">
-                    <i class="fas fa-child"></i>
-                    <h3>Little Ninjas</h3>
-                    <span>Ages 5–9</span>
-                    <p>Fun fundamentals, discipline, character & basic self-defense.</p>
-                </div>
+  <!-- Main content remains concise — fuller details available in modals -->
+  <main class="container" id="main">
+    <section class="teaser">
+      <h2>Programs at a Glance</h2>
+      <div class="program-grid">
+        <article class="program-card">
+          <i class="fas fa-bolt" aria-hidden="true"></i>
+          <h3>Power Up</h3>
+          <p>Adapted Taekwondo for focus, coordination & confidence.</p>
+        </article>
 
-                <div class="program-card">
-                    <i class="fas fa-dragon"></i>
-                    <h3>Dragons</h3>
-                    <span>Ages 10–17</span>
-                    <p>Leadership, advanced technique, competition & practical self-defense.</p>
-                </div>
+        <article class="program-card">
+          <i class="fas fa-child" aria-hidden="true"></i>
+          <h3>Little Ninjas</h3>
+          <p>Fun fundamentals, discipline & basic self‑defense (5–9).</p>
+        </article>
 
-                <div class="program-card">
-                    <i class="fas fa-fire"></i>
-                    <h3>Core</h3>
-                    <span>Ages 17+</span>
-                    <p>Fitness, stress relief, flexibility & real-world self-defense.</p>
-                </div>
+        <article class="program-card">
+          <i class="fas fa-dragon" aria-hidden="true"></i>
+          <h3>Dragons</h3>
+          <p>Leadership, advanced technique & competition (10–17).</p>
+        </article>
 
-            </div>
-        </section>
+        <article class="program-card">
+          <i class="fas fa-fire" aria-hidden="true"></i>
+          <h3>Core</h3>
+          <p>Fitness, flexibility & real‑world self‑defense (18+).</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-        <!-- Schedule -->
-        <section id="schedule" class="section">
-            <h2>Class Schedule</h2>
-            <div class="schedule-table-container">
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>4:00 PM</td><td>Power Up</td><td>—</td><td>Power Up</td><td>—</td><td>Power Up</td><td>Family</td></tr>
-                        <tr><td>5:00 PM</td><td>Little Ninjas</td><td>Dragons Adv.</td><td>Little Ninjas</td><td>Dragons Adv.</td><td>Little Ninjas</td><td>Competition</td></tr>
-                        <tr><td>6:00 PM</td><td>Dragons</td><td>Black Belts</td><td>Dragons</td><td>Black Belts</td><td>Dragons</td><td>—</td></tr>
-                        <tr><td>7:00 PM</td><td>Core</td><td>Dragons</td><td>Core</td><td>Dragons</td><td>Open</td><td>—</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="note">Hours: Mon–Fri 4–8 PM | Sat 8:30–10:30 AM</p>
-        </section>
-
-        <!-- Testimonials -->
-        <section class="section testimonials">
-            <h2>What Families Say</h2>
-            <p>Check our latest reviews</p>
-            <a href="https://www.facebook.com/Panamericantaekwondoacademy1/reviews" class="btn outline" target="_blank" rel="noopener">
-                <i class="fas fa-star"></i> Read Reviews on Facebook
-            </a>
-            <br>
-            <a href="https://www.google.com/search?q=panamerican+taekwondo+academy" class="btn outline" target="_blank" rel="noopener">
-                <i class="fas fa-star"></i> Google Reviews
-            </a>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="section contact">
-            <h2>Ready to Start? Schedule Your Free Trial</h2>
-            
-            <div class="contact-options">
-                <div class="contact-info">
-                    <p><i class="fas fa-map-marker-alt"></i> 3712 Reynolda Rd, Winston-Salem, NC 27106</p>
-                    <p><i class="fas fa-phone"></i> <a href="tel:+13366248499">(336) 624-8499</a></p>
-                    <div class="social">
-                        <a href="https://www.facebook.com/Panamericantaekwondoacademy1/" target="_blank" rel="noopener">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <form action="https://formsubmit.co/panamericantkd22@gmail.com" method="POST" class="trial-form">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone" required>
-                    <select name="program" required>
-                        <option value="">Interested In...</option>
-                        <option>Power Up (All Ages)</option>
-                        <option>Little Ninjas (5–9)</option>
-                        <option>Dragons (10–17)</option>
-                        <option>Core (18+)</option>
-                    </select>
-                    <textarea name="message" placeholder="Goals or questions?" rows="3"></textarea>
-                    <button type="submit" class="btn primary">Reserve Free Trial</button>
-                </form>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="watery-footer">
-        <div class="content">
-            <p>© 2022–2026 Panamerican Taekwondo Academy. All rights reserved.</p>
-            <p class="tagline">Discipline. Respect. Excellence.</p>
+  <!-- Accessible modal templates (one per section) -->
+  <div id="about-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="about-title" tabindex="-1">
+    <div class="modal-dialog">
+      <button class="modal-close" aria-label="Close">×</button>
+      <h2 id="about-title">About Our Academy</h2>
+      <div class="modal-body">
+        <p>With over 20 years of experience we follow World Taekwondo (WT) and Global Traditional Taekwondo Federation (GTTF) curricula. We are committed to individual growth — confidence, discipline, fitness and practical self‑defense skills for all ages and levels.</p>
+        <div class="stats">
+          <div><strong>300+</strong><span>Students trained</span></div>
+          <div><strong>50+</strong><span>Competition medals</span></div>
+          <div><strong>20+</strong><span>Years of excellence</span></div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </div>
 
-    <script src="js/script.js"></script>
+  <div id="programs-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="programs-title" tabindex="-1">
+    <div class="modal-dialog">
+      <button class="modal-close" aria-label="Close">×</button>
+      <h2 id="programs-title">Programs</h2>
+      <div class="modal-body">
+        <ul class="program-list">
+          <li><strong>Power Up:</strong> All ages — adapted training for focus & regulation.</li>
+          <li><strong>Little Ninjas:</strong> Ages 5–9 — fundamentals, play-based discipline.</li>
+          <li><strong>Dragons:</strong> Ages 10–17 — technique, leadership & competition prep.</li>
+          <li><strong>Core:</strong> Ages 18+ — fitness, self‑defense & mobility.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="schedule-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="schedule-title" tabindex="-1">
+    <div class="modal-dialog">
+      <button class="modal-close" aria-label="Close">×</button>
+      <h2 id="schedule-title">Class Schedule</h2>
+      <div class="modal-body">
+        <div class="schedule-table-container">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th scope="col">Time</th><th scope="col">Mon</th><th scope="col">Tue</th><th scope="col">Wed</th><th scope="col">Thu</th><th scope="col">Fri</th><th scope="col">Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>4:00 PM</td><td>Power Up</td><td>—</td><td>Power Up</td><td>—</td><td>Power Up</td><td>Family</td></tr>
+              <tr><td>5:00 PM</td><td>Little Ninjas</td><td>Dragons Adv.</td><td>Little Ninjas</td><td>Dragons Adv.</td><td>Little Ninjas</td><td>Competition</td></tr>
+              <tr><td>6:00 PM</td><td>Dragons</td><td>Black Belts</td><td>Dragons</td><td>Black Belts</td><td>Dragons</td><td>—</td></tr>
+              <tr><td>7:00 PM</td><td>Core</td><td>Dragons</td><td>Core</td><td>Dragons</td><td>Open</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">Hours: Mon–Fri 4–8 PM | Sat 8:30–10:30 AM</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="contact-title" tabindex="-1">
+    <div class="modal-dialog">
+      <button class="modal-close" aria-label="Close">×</button>
+      <h2 id="contact-title">Contact & Free Trial</h2>
+      <div class="modal-body">
+        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 3712 Reynolda Rd, Winston‑Salem, NC 27106</p>
+        <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+13366248499">(336) 624‑8499</a></p>
+        <div class="social">
+          <a href="https://www.facebook.com/Panamericantaekwondoacademy1/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        </div>
+
+        <form action="https://formsubmit.co/panamericantkd22@gmail.com" method="POST" class="trial-form" aria-label="Reserve free trial form">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="tel" name="phone" placeholder="Phone" required>
+          <select name="program" required>
+            <option value="">Interested in...</option>
+            <option>Power Up (All ages)</option>
+            <option>Little Ninjas (5–9)</option>
+            <option>Dragons (10–17)</option>
+            <option>Core (18+)</option>
+          </select>
+          <textarea name="message" placeholder="Goals or questions?" rows="3"></textarea>
+          <button type="submit" class="btn primary">Reserve Free Trial</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="watery-footer" role="contentinfo">
+    <div class="content">
+      <p>© 2022–2026 Panamerican Taekwondo Academy. All rights reserved.</p>
+      <p class="tagline">Discipline. Respect. Excellence.</p>
+    </div>
+  </footer>
+
+  <!-- Minimal modal script (focus management, ESC, backdrop click, trap) -->
+  <script>
+  (function(){
+    const openers = document.querySelectorAll('[data-modal]');
+    const modals = Array.from(document.querySelectorAll('.modal'));
+    let lastFocused = null;
+
+    function focusableElements(container){
+      return container.querySelectorAll('a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])');
+    }
+
+    function trapFocus(modal){
+      const nodes = focusableElements(modal);
+      if(!nodes.length) return;
+      const first = nodes[0], last = nodes[nodes.length-1];
+      function handler(e){
+        if(e.key !== 'Tab') return;
+        if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+        else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+      }
+      modal._trap = handler;
+      modal.addEventListener('keydown', handler);
+    }
+
+    function releaseTrap(modal){
+      if(modal._trap) modal.removeEventListener('keydown', modal._trap);
+      modal._trap = null;
+    }
+
+    function openModal(id, opener){
+      const modal = document.getElementById(id);
+      if(!modal) return;
+      lastFocused = opener || document.activeElement;
+      modal.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
+      const nodes = focusableElements(modal);
+      (nodes[0] || modal).focus();
+      trapFocus(modal);
+      modal.addEventListener('click', backdropClick);
+      modal.querySelectorAll('.modal-close').forEach(b => b.addEventListener('click', () => closeModal(modal)));
+    }
+
+    function closeModal(modal){
+      releaseTrap(modal);
+      modal.removeEventListener('click', backdropClick);
+      modal.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+      if(lastFocused && lastFocused.focus) lastFocused.focus();
+    }
+
+    function backdropClick(e){
+      if(e.target.classList.contains('modal')) closeModal(e.currentTarget);
+    }
+
+    openers.forEach(btn => btn.addEventListener('click', e => {
+      e.preventDefault();
+      openModal(btn.dataset.modal, btn);
+    }));
+
+    document.addEventListener('keydown', e => {
+      if(e.key === 'Escape'){
+        const open = modals.find(m => m.getAttribute('aria-hidden') === 'false');
+        if(open) closeModal(open);
+      }
+    }));
+  })();
+  </script>
 </body>
 </html>
+
