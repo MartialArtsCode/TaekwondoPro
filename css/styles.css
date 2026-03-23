@@ -1,53 +1,116 @@
-body {
+/* ---------- GLOBAL ---------- */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: system-ui;
-  color: #red;
-  background: radial-gradient(135deg, blue, gray, white);
+  padding: 0;
 }
 
+body {
+  font-family: system-ui, sans-serif;
+  color: #f5f5f5; /* light text for dark backgrounds */
+  background: radial-gradient(circle at top left, #0b1a3b, #1e1e2f, #ffffff);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* ---------- NAVIGATION ---------- */
 .quick-nav {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   padding: 20px;
-  
+  justify-content: center;
+  background: rgba(20,20,30,0.85);
+  backdrop-filter: blur(6px);
 }
 
-button {
-  padding: 10px 16px;
+button.nav-btn {
+  padding: 10px 18px;
   background: #111;
   border: 1px solid #222;
+  border-radius: 6px;
   color: #fff;
   cursor: pointer;
-  transition: 0.2s;
+  font-weight: 600;
+  transition: all 0.2s ease;
 }
 
-button:hover {
+button.nav-btn:hover {
   transform: translateY(-2px);
+  background: #222;
 }
 
+/* ---------- HERO ---------- */
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
-.logo {
-  width: 120px;
+.hero .logo {
+  width: 140px;
+  margin-bottom: 20px;
 }
 
-/* MODAL */
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.hero .tagline {
+  font-size: 1.3rem;
+  color: #ddd;
+  margin-bottom: 40px;
+}
+
+/* ---------- PROGRAM GRID ---------- */
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.program-card {
+  background: linear-gradient(135deg, #111, #222);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.program-card i {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: #f39c12;
+}
+
+.program-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.program-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* ---------- MODALS ---------- */
 .modal {
   position: fixed;
   inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-
   background: rgba(0,0,0,0.6);
   backdrop-filter: blur(6px);
-
   opacity: 0;
   visibility: hidden;
-  transition: 0.25s ease;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  z-index: 2000;
 }
 
 .modal[aria-hidden="false"] {
@@ -56,15 +119,16 @@ button:hover {
 }
 
 .modal-dialog {
-  background: linear-gradient(#111,#181818);
-  padding: 20px;
+  background: linear-gradient(180deg, #111, #181818);
+  padding: 25px;
   border-radius: 12px;
   width: 90%;
   max-width: 600px;
-
+  color: #f5f5f5;
+  position: relative;
   transform: translateY(20px);
   opacity: 0;
-  transition: 0.25s;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 .modal[aria-hidden="false"] .modal-dialog {
@@ -74,11 +138,75 @@ button:hover {
 
 .modal-close {
   position: absolute;
-  top: 10px;
+  top: 12px;
   right: 15px;
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 22px;
   color: #fff;
   cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #f39c12;
+}
+
+/* Scrollable modal content */
+.modal-body {
+  max-height: 65vh;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+/* ---------- TABLES ---------- */
+.schedule-table-container {
+  overflow-x: auto;
+  margin: 12px 0;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #161616;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.schedule-table th, .schedule-table td {
+  padding: 10px 8px;
+  text-align: center;
+  border-bottom: 1px solid #222;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.schedule-table th {
+  background: #0f4c81;
+  font-weight: 700;
+}
+
+/* ---------- FOOTER ---------- */
+.watery-footer {
+  background: #0b0b12;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.watery-footer .tagline {
+  margin-top: 6px;
+  font-weight: 600;
+  color: #f5f5f5;
+}
+
+/* ---------- LINKS ---------- */
+a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
