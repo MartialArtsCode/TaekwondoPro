@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    content-position: center;
 }
 
 html {
@@ -13,6 +14,7 @@ html {
 
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    position: center;
     line-height: 1.6;
     color: #d4d4d4;
     background: #0d1117;
@@ -274,12 +276,13 @@ h3 {
     font-size: 1.3rem;
 }
 
-.stats > div {
+.stats div {
     text-align: center;
 }
 
 .stats strong {
     display: block;
+    justify-content: center;
     font-size: 3rem;
     color: var(--color-accent);
     margin-bottom: 0.4rem;
@@ -317,6 +320,7 @@ h3 {
 
 .note {
     text-align: center;
+   
     color: #aaa;
     font-style: italic;
     margin-top: 1.5rem;
@@ -464,6 +468,15 @@ h3 {
 .whatsapp-float i {
     margin-top: -2px;
 }
+
+.sms-float:hover {
+   transform: scale(1.1);
+   background-color: #20b358;
+   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.sms-float i {
+   margin-top: -2px;
 
 /* ==========================================================================
    RESPONSIVE
