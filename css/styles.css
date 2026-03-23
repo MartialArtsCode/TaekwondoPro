@@ -61,6 +61,15 @@ button.nav-btn:hover {
   margin-bottom: 40px;
 }
 
+.whatsapp-float {
+  hover: flex;
+  padding: 40px 40px;
+  animated: blink;
+  
+.sms-float {
+  hover: flex;
+  padding: 40px 40px;
+  animated: blink;
 /* ---------- PROGRAM GRID ---------- */
 .program-grid {
   display: grid;
