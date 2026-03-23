@@ -1,0 +1,26 @@
+{
+  "nav_about": "Acerca de",
+  "nav_programs": "Programas",
+  "nav_schedule": "Horario",
+  "nav_contact": "Contacto",
+
+  "hero_title": "Domina el Arte",
+  "hero_tagline": "Construye confianza. Transforma tu vida.",
+
+  "about_title": "Sobre Nuestra Academia",
+  "about_desc": "Más de 20 años desarrollando disciplina y confianza.",
+
+  "programs_title": "Programas",
+  "program1": "Power Up – Todas las edades",
+  "program2": "Pequeños Ninjas – 5–9",
+  "program3": "Dragones – 10–17",
+  "program4": "Core – 18+",
+
+  "schedule_title": "Horario",
+  "schedule_desc": "Lunes a Viernes 4–8 PM | Sábados",
+
+  "contact_title": "Contacto",
+  "name": "Tu nombre",
+  "email": "Correo electrónico",
+  "message": "Mensaje"
+}
