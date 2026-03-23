@@ -13,6 +13,8 @@ body {
   line-height: 1.5;
 }
 
+button.nav-btn
+
 /* ---------- NAVIGATION ---------- */
 .quick-nav {
   display: flex;
@@ -61,15 +63,34 @@ button.nav-btn:hover {
   margin-bottom: 40px;
 }
 
-.whatsapp-float {
-  hover: flex;
-  padding: 40px 40px;
-  animated: blink;
-  
+.whatsapp-float,
 .sms-float {
-  hover: flex;
-  padding: 40px 40px;
-  animated: blink;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  margin: 10px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float {
+  background: #25D366;
+}
+
+.sms-float {
+  background: #007AFF;
+}
+
+.whatsapp-float:hover,
+.sms-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
 /* ---------- PROGRAM GRID ---------- */
 .program-grid {
   display: grid;
@@ -127,11 +148,9 @@ button.nav-btn:hover {
 
 .modal-dialog {
   background: white;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 500px;
-  width: 90%;
+  color: #111;
 }
+
 
 .modal-close {
   float: right;
