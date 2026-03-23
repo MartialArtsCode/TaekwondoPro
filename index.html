@@ -4,60 +4,71 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title>Panamerican Taekwondo Academy</title>
+  <title>TaekwondoPro</title>
 
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="logo" href="assets/full.png">
-    <link rel="modals" href="modals/~.html>
 </head>
 
 <body>
 
 <nav class="quick-nav">
-  <button data-modal="about-modal">About</button>
-  <button data-modal="programs-modal">Programs</button>
-  <button data-modal="contact-modal">Contact</button>
+  <button data-modal="about-modal" data-i18n="nav_about">About</button>
+  <button data-modal="programs-modal" data-i18n="nav_programs">Programs</button>
+  <button data-modal="schedule-modal" data-i18n="nav_schedule">Schedule</button>
+  <button data-modal="contact-modal" data-i18n="nav_contact">Contact</button>
 </nav>
 
-<header class="img" src="assets/full.png">
-  <h1 data-i18n="title">Master The Art</h1>
-  <p data-i18n="hero_sub">Build confidence. Transform your life</p>
+<header class="hero">
+  <img src="assets/full.png" class="logo">
+  <h1 data-i18n="hero_title">Master The Art</h1>
+  <p data-i18n="hero_tagline">Build confidence. Transform your life.</p>
 </header>
 
-<!-- MODAL -->
-<div id="about-modal" onClick:"href=modals/about-modal.html">
+<!-- MODALS -->
+
+<div id="about-modal" class="modal" aria-hidden="true">
   <div class="modal-dialog">
     <button class="modal-close">×</button>
     <h2 data-i18n="about_title">About Our Academy</h2>
-    <p data-i18n="about_desc">
-      With over 20 years of experience w e
-      follow World Taekwondo (WT) and Global Traditional Taekwondo Federation (GTTF)</p>
-
-<div class="stats">
-  <div>
-    <strong>300+</strong>
-    <span data-i18n="students">Students trained</span>
-  </div>
-</div>
-    <p data-i18n="about_text">We build discipline, confidence and strength.</p>
+    <p data-i18n="about_desc"></p>
   </div>
 </div>
 
 <div id="programs-modal" class="modal" aria-hidden="true">
   <div class="modal-dialog">
     <button class="modal-close">×</button>
-    <h2>Programs</h2>
+    <h2 data-i18n="programs_title">Programs</h2>
+    <ul>
+      <li data-i18n="program1"></li>
+      <li data-i18n="program2"></li>
+      <li data-i18n="program3"></li>
+      <li data-i18n="program4"></li>
+    </ul>
+  </div>
+</div>
+
+<div id="schedule-modal" class="modal" aria-hidden="true">
+  <div class="modal-dialog">
+    <button class="modal-close">×</button>
+    <h2 data-i18n="schedule_title">Schedule</h2>
+    <p data-i18n="schedule_desc"></p>
   </div>
 </div>
 
 <div id="contact-modal" class="modal" aria-hidden="true">
   <div class="modal-dialog">
     <button class="modal-close">×</button>
-    <h2>Contact</h2>
+    <h2 data-i18n="contact_title">Contact</h2>
+
+    <form>
+      <input type="text" data-i18n-placeholder="name" placeholder="Your name">
+      <input type="email" data-i18n-placeholder="email" placeholder="Email">
+      <textarea data-i18n-placeholder="message" placeholder="Message"></textarea>
+    </form>
   </div>
 </div>
 
-<script src="app.js"></script>
+<script type="module" src="js/app.js"></script>
 </body>
 </html>
