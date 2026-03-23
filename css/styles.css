@@ -18,8 +18,8 @@ body {
 /* ---------- NAVIGATION ---------- */
 .quick-nav {
   display: flex;
-  gap: 12px;
-  padding: 20px;
+  gap: 1px;
+  padding: 10px;
   justify-content: center;
   background: rgba(20,20,30,0.85);
   backdrop-filter: blur(6px);
@@ -29,8 +29,8 @@ button.nav-btn
 button.nav-btn {
   padding: 8px 8px;
   background: #111;
-  border: 2px solid #222;
-  border-radius: 6px;
+  border: 12px solid #222;
+  border-radius: 2px;
   color: #fff;
   cursor: pointer;
   font-weight: 600;
