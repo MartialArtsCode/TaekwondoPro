@@ -1,0 +1,26 @@
+{
+  "nav_about": "About",
+  "nav_programs": "Programs",
+  "nav_schedule": "Schedule",
+  "nav_contact": "Contact",
+
+  "hero_title": "Master The Art",
+  "hero_tagline": "Build confidence. Transform your life.",
+
+  "about_title": "About Our Academy",
+  "about_desc": "Over 20 years of experience developing discipline and confidence.",
+
+  "programs_title": "Programs",
+  "program1": "Power Up – All ages",
+  "program2": "Little Ninjas – 5–9",
+  "program3": "Dragons – 10–17",
+  "program4": "Core – 18+",
+
+  "schedule_title": "Schedule",
+  "schedule_desc": "Mon–Fri 4–8 PM | Sat mornings",
+
+  "contact_title": "Contact",
+  "name": "Your name",
+  "email": "Email",
+  "message": "Message"
+}
