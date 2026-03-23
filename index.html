@@ -169,70 +169,81 @@
 
   <!-- Minimal modal script (focus management, ESC, backdrop click, trap) -->
   <script>
-  (function(){
-    const openers = document.querySelectorAll('[data-modal]');
-    const modals = Array.from(document.querySelectorAll('.modal'));
-    let lastFocused = null;
+(() => {
+  const modals = document.querySelectorAll('.modal');
+  let activeModal = null;
+  let lastFocused = null;
 
-    function focusableElements(container){
-      return container.querySelectorAll('a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])');
+  const FOCUSABLE = 'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
+
+  function openModal(id, trigger) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+
+    // close any open modal first
+    if (activeModal) closeModal(activeModal);
+
+    activeModal = modal;
+    lastFocused = trigger || document.activeElement;
+
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+
+    // focus first element safely
+    const focusables = modal.querySelectorAll(FOCUSABLE);
+    setTimeout(() => {
+      (focusables[0] || modal).focus();
+    }, 0);
+  }
+
+  function closeModal(modal) {
+    if (!modal) return;
+
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+
+    if (lastFocused && typeof lastFocused.focus === 'function') {
+      lastFocused.focus();
     }
 
-    function trapFocus(modal){
-      const nodes = focusableElements(modal);
-      if(!nodes.length) return;
-      const first = nodes[0], last = nodes[nodes.length-1];
-      function handler(e){
-        if(e.key !== 'Tab') return;
-        if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
-        else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
-      }
-      modal._trap = handler;
-      modal.addEventListener('keydown', handler);
-    }
+    activeModal = null;
+  }
 
-    function releaseTrap(modal){
-      if(modal._trap) modal.removeEventListener('keydown', modal._trap);
-      modal._trap = null;
-    }
-
-    function openModal(id, opener){
-      const modal = document.getElementById(id);
-      if(!modal) return;
-      lastFocused = opener || document.activeElement;
-      modal.setAttribute('aria-hidden','false');
-      document.body.style.overflow = 'hidden';
-      const nodes = focusableElements(modal);
-      (nodes[0] || modal).focus();
-      trapFocus(modal);
-      modal.addEventListener('click', backdropClick);
-      modal.querySelectorAll('.modal-close').forEach(b => b.addEventListener('click', () => closeModal(modal)));
-    }
-
-    function closeModal(modal){
-      releaseTrap(modal);
-      modal.removeEventListener('click', backdropClick);
-      modal.setAttribute('aria-hidden','true');
-      document.body.style.overflow = '';
-      if(lastFocused && lastFocused.focus) lastFocused.focus();
-    }
-
-    function backdropClick(e){
-      if(e.target.classList.contains('modal')) closeModal(e.currentTarget);
-    }
-
-    openers.forEach(btn => btn.addEventListener('click', e => {
+  // 🔹 Open buttons (event delegation = no binding issues)
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-modal]');
+    if (trigger) {
       e.preventDefault();
-      openModal(btn.dataset.modal, btn);
-    }));
+      openModal(trigger.dataset.modal, trigger);
+      return;
+    }
 
-    document.addEventListener('keydown', e => {
-      if(e.key === 'Escape'){
-        const open = modals.find(m => m.getAttribute('aria-hidden') === 'false');
-        if(open) closeModal(open);
-      }
-    }));
-  })();
+    // 🔹 Close button
+    if (e.target.closest('.modal-close')) {
+      closeModal(e.target.closest('.modal'));
+      return;
+    }
+
+    // 🔹 Backdrop click
+    if (e.target.classList.contains('modal')) {
+      closeModal(e.target);
+    }
+  });
+
+  // 🔹 ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && activeModal) {
+      closeModal(activeModal);
+    }
+  });
+
+  // 🔹 Stop clicks inside dialog from closing modal
+  document.querySelectorAll('.modal-dialog').forEach(dialog => {
+    dialog.addEventListener('click', e => e.stopPropagation());
+  });
+
+})();
+</script>
   </script>
 </body>
 </html>
