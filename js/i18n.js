@@ -2,7 +2,7 @@ export async function initI18n() {
 
   const lang = navigator.language.startsWith('es') ? 'es' : 'en';
 
-  const res = await fetch(`/locales/${lang}.json`);
+  const res = await fetch(new URL(`../locales/${lang}.json`, import.meta.url));
   const dict = await res.json();
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
