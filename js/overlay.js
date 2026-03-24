@@ -1,30 +1,30 @@
-export function initModals() {
+export function initOverlays() {
   let active = null;
 
   document.addEventListener('click', (e) => {
 
-    const open = e.target.closest('[data-modal]');
+    const open = e.target.closest('[data-overlay]');
     if (open) {
-      const modal = document.getElementById(open.dataset.modal);
-      if (!modal) return;
+      const overlay = document.getElementById(open.dataset.overlay);
+      if (!overlay) return;
 
       if (active) active.setAttribute('aria-hidden', 'true');
 
-      modal.setAttribute('aria-hidden', 'false');
+      overlay.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
-      active = modal;
+      active = overlay;
       return;
     }
 
-    const close = e.target.closest('.modal-close');
+    const close = e.target.closest('.overlay-close');
     if (close) {
-      close.closest('.modal').setAttribute('aria-hidden','true');
+      close.closest('.overlay').setAttribute('aria-hidden','true');
       document.body.style.overflow = '';
       active = null;
       return;
     }
 
-    if (e.target.classList.contains('modal')) {
+    if (e.target.classList.contains('overlay')) {
       e.target.setAttribute('aria-hidden','true');
       document.body.style.overflow = '';
       active = null;
