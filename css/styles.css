@@ -126,8 +126,8 @@ button.nav-btn:hover {
   color: #ccc;
 }
 
-/* ---------- MODALS ---------- */
-.modal {
+/* ---------- OVERLAYS ---------- */
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -140,11 +140,11 @@ button.nav-btn:hover {
   z-index: 999;
 }
 
-.modal.active {
-  display: flex;
+.overlay.active {
+  display: block;
 }
 
-.modal-dialog {
+.overlay-dialog {
   background: white;
   color: #111;
 }
@@ -152,10 +152,10 @@ button.nav-btn:hover {
 
 
 /* Scrollable modal content */
-.modal-body {
+.overlay-body {
   max-height: 65vh;
   overflow-y: auto;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 /* ---------- TABLES ---------- */
@@ -208,5 +208,5 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: pulse;
 }
