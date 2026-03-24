@@ -10,45 +10,46 @@
 
 <body>
   <header class="hero">
-    <img src="assets/full.png" class="logo">
-    <nav class="quick-nav">
-      <button data-modal="about-modal">About</button>
-      <button data-modal="programs-modal">Programs</button>
-      <button data-modal="schedule-modal">Schedule</button>
-      <button data-modal="contact-modal">Contact</button>
-    </nav>
     <section>
-    <h1 data-i18n="hero_title">Master The Art</h1>
-      <p data-i18n="hero_tagline">Build confidence. Transform your life.</p>
-      <div class="hero-cta">
-        <a href="https://wa.me/13366248499?text=I%20want%20to%20schedule%20a%20free%20trial%20at%20Panamerican%20Taekwondo%20Academy" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Message on WhatsApp">
-          <i class="fab fa-whatsapp" aria-hidden="true"></i>
-        </a>
-        <a href="sms:+13366248499?body=I%20want%20to%20schedule%20a%20free%20trial%20at%20Panamerican%20Taekwondo%20Academy" class="sms-float" target="_blank" rel="noopener noreferrer" aria-label="Send SMS">
-          <i class="fas fa-comment-dots" aria-hidden="true"></i>
-        </a>
-      </div>
-    </section>
-  </header>
+      <img src="assets/full.png" class="logo">
+      <nav class="quick-nav">
+        <button data-modal="about-modal">About</button>
+        <button data-modal="programs-modal">Programs</button>
+        <button data-modal="schedule-modal">Schedule</button>
+        <button data-modal="contact-modal">Contact</button>
+      </nav>
+      <section>
+        <div id="programs-modal" class="modal" aria-hidden="true">
+          <div class="modal-dialog">
+            <button class="modal-close">×</button>
+            <h2 data-i18n="programs_title">Programs</h2>
+            <ul>
+              <li data-i18n="program1"></li>
+              <li data-i18n="program2"></li>
+              <li data-i18n="program3"></li>
+              <li data-i18n="program4"></li>
+            </ul>
+          </div>
+        </div>
+        <section>
+          <h1 data-i18n="hero_title">Master The Art</h1>
+          <p data-i18n="hero_tagline">Build confidence. Transform your life.</p>
+          <div class="hero-cta">
+            <a href="https://wa.me/13366248499?text=I%20want%20to%20schedule%20a%20free%20trial%20at%20Panamerican%20Taekwondo%20Academy" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Message on WhatsApp">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            </a>
+            <a href="sms:+13366248499?body=I%20want%20to%20schedule%20a%20free%20trial%20at%20Panamerican%20Taekwondo%20Academy" class="sms-float" target="_blank" rel="noopener noreferrer" aria-label="Send SMS">
+              <i class="fas fa-comment-Text-Us" aria-hidden="true"></i>
+            </a>
+          </div>
+        </section>
+      </header>
   <!-- MODALS -->
   <div id="about-modal" class="modal" aria-hidden="true">
     <div class="modal-dialog">
       <button class="modal-close">×</button>
       <h2 data-i18n="about_title">About Our Academy</h2>
       <p data-i18n="about_desc"></p>
-    </div>
-  </div>
-  
-  <div id="programs-modal" class="modal" aria-hidden="true">
-    <div class="modal-dialog">
-      <button class="modal-close">×</button>
-      <h2 data-i18n="programs_title">Programs</h2>
-      <ul>
-        <li data-i18n="program1"></li>
-        <li data-i18n="program2"></li>
-        <li data-i18n="program3"></li>
-        <li data-i18n="program4"></li>
-      </ul>
     </div>
   </div>
   
