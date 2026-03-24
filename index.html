@@ -13,15 +13,15 @@
     <section>
       <img src="assets/full.png" class="logo">
       <nav class="quick-nav">
-        <button data-modal="about-modal">About</button>
-        <button data-modal="programs-modal">Programs</button>
-        <button data-modal="schedule-modal">Schedule</button>
-        <button data-modal="contact-modal">Contact</button>
+        <button data-overlay="about-overlay">About</button>
+        <button data-overlay="programs-overlay">Programs</button>
+        <button data-overlay="schedule-overlay">Schedule</button>
+        <button data-overlay="contact-overlay">Contact</button>
       </nav>
       <section>
-        <div id="programs-modal" class="modal" aria-hidden="true">
-          <div class="modal-dialog">
-            <button class="modal-close">×</button>
+        <div id="programs-overlay" class="overlay" aria-hidden="true">
+          <div class="overlay-dialog">
+            <button class="overlay-close">×</button>
             <h2 data-i18n="programs_title">Programs</h2>
             <ul>
               <li data-i18n="program1"></li>
@@ -48,26 +48,26 @@
   </header>
 </body>
   
-<modals><!-- MODALS -->
-  <div id="about-modal" class="modal" aria-hidden="true">
-    <div class="modal-dialog">
-      <button class="modal-close">×</button>
+<overlay settings><!-- MODALS -->
+  <div id="about-overlay" class="overlay" aria-hidden="true">
+    <div class="overlay-dialog">
+      <button class="overlay-close">×</button>
       <h2 data-i18n="about_title">About Our Academy</h2>
       <p data-i18n="about_desc"></p>
     </div>
   </div>
   
-  <div id="schedule-modal" class="modal" aria-hidden="true">
-    <div class="modal-dialog">
+  <div id="schedule-overlay" class="overlay" aria-hidden="true">
+    <div class="overlay-dialog">
       <button class="modal-close">×</button>
       <h2 data-i18n="schedule_title">Schedule</h2>
       <p data-i18n="schedule_desc"></p>
     </div>
   </div>
   
-  <div id="contact-modal" class="modal" aria-hidden="true">
-    <div class="modal-dialog">
-      <button class="modal-close">×</button>
+  <div id="contact-overlay" class="overlay" aria-hidden="true">
+    <div class="overlay-dialog">
+      <button class="overlay-close">×</button>
       <h2 data-i18n="contact_title">Contact</h2>
       
       <form>
