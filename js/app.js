@@ -1,45 +1,45 @@
-const buttons = document.querySelectorAll('[data-modal]');
-const modals = document.querySelectorAll('.modal');
-const closes = document.querySelectorAll('.modal-close');
+const buttons = document.querySelectorAll('[data-overlay]');
+const overlays = document.querySelectorAll('.overlay');
+const closes = document.querySelectorAll('.overlay-close');
 
 // OPEN MODAL
 buttons.forEach(btn => {
   btn.addEventListener('click', () => {
-    const id = btn.dataset.modal;
-    const modal = document.getElementById(id);
+    const id = btn.dataset.overlay;
+    const overlay = document.getElementById(id);
 
-    if (!modal) return;
+    if (!overlay) return;
 
-    modal.classList.add('active');
-    modal.setAttribute('aria-hidden', 'false');
+    overlay.classList.add('active');
+    overlay.setAttribute('aria-hidden', 'false');
   });
 });
 
 // CLOSE BUTTON
 closes.forEach(btn => {
   btn.addEventListener('click', () => {
-    const modal = btn.closest('.modal');
-    modal.classList.remove('active');
-    modal.setAttribute('aria-hidden', 'true');
+    const overlay = btn.closest('.overlay');
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden', 'true');
   });
 });
 
 // CLICK OUTSIDE CLOSE
-modals.forEach(modal => {
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.remove('active');
-      modal.setAttribute('aria-hidden', 'true');
+overlays.forEach(overlay => {
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
     }
   });
 });
 
 
-import { initModals } from './modal.js';
+import { initOverlays } from './overlay.js';
 import { initI18n } from './i18n.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
-  initModals();
+  initOverlays();
   await initI18n();
 
 });
