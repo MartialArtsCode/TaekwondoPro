@@ -17,12 +17,12 @@ body {
 
 /* ---------- NAVIGATION ---------- */
 .quick-nav {
-  display: flex;
-  gap: 1px;
+  display: top;
+  gap: 2px;
   padding: 10px;
   justify-content: center;
   background: rgba(20,20,30,0.85);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(1px);
 }
 
 button.nav-btn
